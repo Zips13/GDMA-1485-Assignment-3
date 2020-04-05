@@ -75,15 +75,21 @@
 /* -- MEDIA -- */
 #bg-lights {
         background-image: url("../img/lights.jpg");
+        background-size:cover;
 }
 
 #bg-laptop {
         background-image: url("../img/laptop.jpg");
-        background-size:cover;
+        background-repeat:no-repeat;
 }
 
 #bg-stats {
         background-image:url("../img/stats.jpg")
+}
+
+#bg-latest-works {
+        background-image: url("../img/bottles.jpg");
+        background-repeat:no-repeat;
 }
 
 /* -- FORMS -- */ 
@@ -147,7 +153,34 @@
         color:#fff;
 }
 
+.col-updates:first-child, .col-updates:last-child, .col-updates:nth-child(2) {
+        width:300px;
+}
 
+#begin-with-us .row > div {
+        width:510px;
+}
+
+#bg-light-grey {
+        background-color:#F7F7F7;
+}
+
+.col-contact:first-child {
+        width:210px;
+}
+
+.col-contact:nth-child(2) {
+        width:90px;
+}
+
+.col-contact:last-child {
+        width:195px;
+}
+
+footer + section {
+        text-align:center;
+}
+ 
 /* -- NAVIGATION -- */
 .col-nav:first-child {
         background-color:#000;
