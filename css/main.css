@@ -61,21 +61,46 @@
         font-family: 'Open Sans', sans-serif;
     }
 
+/* -- In validation, there are a bunch of errors regarding the vendor prefixes, I'm going to leave them just because I'm assuming that it is expected to have those -- */
 
 /*--------------------------------------------------------------
 4.0 - ELEMENTS 
 -------------------------------------------------------------- */
 
-/* -- LISTS -- */
-.col-nav li{
-        display:inline-block;
-        margin-left:36px;
-        
+footer {
+        padding-top:60px;
+        padding-bottom:60px;
 }
+
+
+
+a, a:hover {
+        text-decoration:none;
+}
+
+button:hover {
+        background-color:#fff;
+        color:#000;
+        border: 1px solid #000;
+}
+/* -- LISTS -- */
+
+footer li {
+        list-style-type:none;
+}
+
+footer ul, #begin-with-us ul {
+        padding-inline-start:0;
+}
+
 
 /* -- MEDIA -- */
 #bg-lights {
         background-image: url("../img/lights.jpg");
+        -o-background-size:cover;
+        -ms-background-size:cover;
+        -webkit-background-size:cover;
+        -moz-background-size:cover;
         background-size:cover;
         padding-top:300px;
         padding-bottom:300px;
@@ -84,37 +109,136 @@
 #bg-laptop {
         background-image: url("../img/laptop.jpg");
         background-repeat:no-repeat;
+        padding-top:90px;
+        padding-bottom:90px;
+        -o-background-size:cover;
+        -ms-background-size:cover;
+        -webkit-background-size:cover;
+        -moz-background-size:cover;
+        background-size:cover;
 }
 
 #bg-stats {
-        background-image:url("../img/stats.jpg")
+        background-image:url("../img/stats.jpg");
+        padding-top:90px;
+        padding-bottom:90px;
+        background-repeat:no-repeat;
+        -o-background-size:cover;
+        -ms-background-size:cover;
+        -webkit-background-size:cover;
+        -moz-background-size:cover;
+        background-size:cover;
 }
 
-#bg-latest-works {
+#bg-latest-works .wrapper {
         background-image: url("../img/bottles.jpg");
         background-repeat:no-repeat;
+        margin-top:180px;
+        margin-bottom:180px;
+}
+
+#begin-with-us .wrapper {
+        background-image: url("../img/phone.jpg");
+        background-repeat:no-repeat;
+        background-size:contain;
+        padding-top:210px;
+        padding-bottom:180px;
+}
+
+#logos img:first-child, #logos img:nth-child(2), #logos img:nth-child(3), #logos img:nth-child(4), #logos img:nth-child(5) {
+        margin-right:100px;
+}
+
+#logos {
+        padding-top:20px;
+        padding-bottom:20px;
 }
 
 /* -- FORMS -- */ 
+legend {
+        display:none;
+}
+
+fieldset {
+        border:none;
+}
+
+label {
+        font-size:20px;
+        font-weight:300;
+        letter-spacing:4px;
+        text-transform:uppercase;
+}
+
+label span {
+        font-weight:700;
+}
+
+input {
+        border:none;
+        border-bottom: 1px solid #000;
+        background-color:#F7F7F7;
+        width:450px;
+}
+
+input:focus {
+        outline:none;
+}
+
+input, label{
+        margin-right:75px;
+}
+
+button {
+        text-transform:uppercase;
+        background-color:#000;
+        color:#fff;
+        -moz-border-radius:50px;
+        -o-border-radius:50px;
+        -ms-border-radius:50px;
+        -webkit-border-radius:50px;
+        border-radius:50px;
+        padding-top:10px;
+        padding-bottom:10px;
+        padding-left:20px;
+        padding-right:20px;
+}
+
+button:focus {
+        outline:none;
+}
+
 
 
 /* -- TYPOGRAPHY -- */
-h2 {
-        font-weight:300;
+
+footer a {
+        color:#fff;
 }
 
-h3 {
-        text-transform: uppercase;
-        font-weight:300;
-}
 /*--------------------------------------------------------------
 5.0 OBJECTS
 -------------------------------------------------------------- */
+
+/* -- FRAMEWORK -- */
+.row {
+        overflow:auto;
+}
+
+.wrapper {
+        margin:0 auto;
+        width:1170px;
+}
 
 
 /*--------------------------------------------------------------
 6.0 COMPONENTS
 -------------------------------------------------------------- */
+.col-nav li{
+        display:inline-block;
+        margin-left:36px;
+        
+}
 
 .col-helifeatures:first-child, .col-who-we-are:last-child, .col-what-we-do:last-child {
         width:360px;
@@ -128,11 +252,29 @@ h3 {
         width:195px;
 }
 
+.col-stats:first-child, .col-stats:nth-child(2) {
+        margin-right:50px;
+}
+
+.col-stats:nth-child(2) {
+        border-left:1px solid #fff;
+        border-right:1px solid #fff;
+}
+
+.col-stats:nth-child(3) {
+        border-right:1px solid #fff;
+        padding-right:50px;
+}
+
+.col-stats, .col-helifeatures:nth-child(2), .col-helifeatures:nth-child(3), .col-helifeatures:last-child, .col-nav:first-child, #bg-latest-works li{
+        text-align:center;
+}
+
 .col-helifeatures:nth-child(2), .col-helifeatures:nth-child(3), .col-helifeatures:last-child {
         margin-top:180px;
         border-left:1px solid #fff;
-        text-align:center;
 }
+
 .col-helifeatures:nth-child(2) {
         margin-right:45px;
         margin-left:45px;
@@ -140,13 +282,11 @@ h3 {
 
 .col-helifeatures:first-child {
         margin-top:100px;
-        font-size:10px;
         margin-bottom:90px;
 }
 
 .col-helifeatures:first-child p {
         line-height:15px;
-        margin-bottom:30px;
 }
 
 .bg-grey {
@@ -160,6 +300,10 @@ h3 {
 
 .col-who-we-are:first-child, .col-what-we-do:first-child {
         width:36px;
+}
+
+.col-who-we-are:last-child, .col-what-we-do:last-child {
+        margin-left:14px;
 }
 
 #bg-lights .wrapper > div > div {
@@ -186,8 +330,21 @@ h3 {
         color:#fff;
 }
 
-.col-updates:first-child, .col-updates:last-child, .col-updates:nth-child(2) {
+.col-updates {
         width:300px;
+}
+
+.col-updates:first-child {
+        margin-left:100px;
+}
+.col-updates:nth-child(2) {
+        margin-right:50px;
+        margin-left:35px;
+}
+
+.col-updates:last-child img {
+        width:300px;
+        
 }
 
 #begin-with-us .row > div {
@@ -196,6 +353,8 @@ h3 {
 
 #bg-light-grey {
         background-color:#F7F7F7;
+        padding-top:75px;
+        padding-bottom:75px;
 }
 
 .col-contact:first-child {
@@ -210,22 +369,29 @@ h3 {
         width:195px;
 }
 
+
 footer + section {
         text-align:center;
 }
- 
+
+footer + section header {
+        display:none;
+}
+
+#bg-lights header, #bg-lights header span, .col-latest-works div p:first-child, h2, h3 {
+        font-weight:300;
+}
+
 #bg-lights header {
         font-size:5px;
-        font-weight:300;
         letter-spacing:10px;
 }
 
 #bg-lights header span {
         font-size:40px;
-        font-weight:300;
 }
 
-#bg-lights header span span, .bg-grey header span {
+#bg-lights header span span, .bg-grey header span, #bg-laptop header span, .col-stats p:last-child, #shop h3 span, .col-contact li:first-child {
         font-weight:700;
 }
 
@@ -233,28 +399,180 @@ footer + section {
         letter-spacing:2px;
 }
 
-#bg-lights header, .bg-grey header, .col-helifeatures i + p {
+#bg-lights header, .bg-grey header, .col-helifeatures i + p, #bg-laptop h4, .col-latest-works div p:first-child, h3, .col-stats p:first-of-type, .col-contact li:first-child  {
         text-transform:uppercase;
 }
 
 .bg-grey header {
         font-size:20px;
+}
+
+.col-latest-works div p:first-child, .bg-grey header {
         letter-spacing:5px;
 }
 
-.bg-grey i {
+.bg-grey i, #bg-laptop h3, .col-stats p:last-child, #bg-stats i, .col-latest-works div p:first-child, #begin-with-us h3 {
         font-size:30px;
 }
 
-a, a:hover {
-        text-decoration:none;
+#bg-laptop h3, #begin-with-us h3 {
+        letter-spacing:8px;
 }
+
+#bg-laptop i {
+        font-size:25px;
+}
+
+#bg-laptop h4 {
+        font-size:15px;
+        letter-spacing:2px;
+        margin-top:0px;
+}
+
+#bg-laptop .row .row:nth-of-type(2) {
+        margin-top:45px;
+}
+
+#bg-laptop p, #bg-laptop a, #bg-laptop a:hover, #bg-laptop a:visited, #new-updates p {
+        line-height:15px;
+}
+
+#bg-laptop p {
+        margin-bottom:0px;
+}
+
+#shop h3 {
+        letter-spacing:3px;
+}
+
+#bg-laptop a, #bg-laptop a:hover, #bg-laptop a:visited {
+        text-decoration: underline;
+        color: #000;
+}
+
+#bg-stats .row {
+        margin-left:90px;
+        margin-right:90px;
+}
+
+.col-stats p:last-child {
+        margin-top:0;
+}
+
+.col-latest-works {
+        width:450px;
+}
+
+.col-latest-works div {
+        color:#fff;
+        background-color: #222222;
+        padding-top:36px;
+        padding-bottom:36px;
+        padding-left:30px;
+}
+
+.col-latest-works div p:last-child, .col-helifeatures:first-child, #bg-laptop p, #bg-laptop a, #bg-laptop a:hover, #bg-laptop a:visited, #new-updates p, #begin-with-us p, footer, .col-sprites i  {
+        font-size:10px;
+}
+
+#bg-latest-works a {
+        background-color: #222222;
+        width:60px;
+        height:60px;
+        display:inline-block;
+        padding-top:7px;
+        color: #fff;
+        font-size:35px;
+}
+
+#bg-latest-works li {
+        list-style-type: none;
+        display:inline-block;
+}
+
+.col-latest-works header {
+        margin-left:35px;
+}
+
+.col-updates-head:first-child {
+        width:45px;
+}
+
+.col-updates-head:last-child {
+        width:240px;
+}
+
+.col-updates-head i {
+        font-size:23px;
+        border:5px solid #F7F7F7;
+}
+
+.col-updates-head h3 {
+        margin-top:0;
+}
+
+#begin-with-us li {
+        display:inline-block;
+}
+
+.col-sprites i {
+        margin-right:12px;
+}
+
+.col-contact:first-child > i, .col-contact:nth-child(2) li:first-child, .col-contact:last-child li:first-child, .col-helifeatures:first-child p,.col-latest-works div p:first-child, #new-updates p, #begin-with-us p {
+        margin-bottom:30px;
+}
+
+.col-contact:nth-child(2) li:first-child, .col-contact:last-child li:first-child {
+        font-size:13px;
+}
+
+.col-contact:first-child li, .col-contact:nth-child(2) li {
+        margin-bottom:15px;
+}
+
+.col-contact .row {
+        height:14px;
+}
+
+.col-contact:first-child {
+        margin-right:550px;
+}
+
+#begin-with-us li:first-child {
+        margin-right: 15px;
+}
+
+
+
+.col-contact:last-child li:nth-child(3), .col-contact:last-child li:nth-child(4), .col-contact:last-child li:nth-child(2), .col-contact:last-child li:nth-child(5) {
+        border-top:1px solid #fff;
+        padding-top:10px;
+        padding-bottom:10px;
+}
+
+.col-contact:last-child li:last-child {
+        border-bottom:1px solid #fff;
+}
+
+#bg-stats header {
+        display:none;
+}
+
+#logos header {
+        display:none;
+}
+
+
+
+
+
+
 
 /* -- NAVIGATION -- */
 .col-nav:first-child {
         background-color:#000;
         color:#fff;
-        text-align:center;
         padding-left:30px;
         padding-right:30px;
 }
@@ -265,8 +583,12 @@ a, a:hover {
 
 .col-nav:last-child {
         margin-right:24px;
+        margin-top:16px;
 }
 
+.col-nav a {
+        color:#000;
+}
 
 
 
@@ -278,13 +600,53 @@ a, a:hover {
 7.0 UTILITIES
 -------------------------------------------------------------- */
 
-.row {
-        overflow:auto;
+.btn-grey {
+        background-color:#222222;
+        border:1px solid #fff;
+        -moz-border-radius:50px;
+        -o-border-radius:50px;
+        -ms-border-radius:50px;
+        -webkit-border-radius:50px;
+        border-radius:50px;
+        padding:5px 10px;
+        color:#fff;
 }
 
-.wrapper {
-        margin:0 auto;
-        width:1170px;
+.btn-grey:hover {
+        background-color:#474747;
+}
+
+.btn-white {
+        background-color: #fff;
+        border:1px solid #000;
+        -moz-border-radius:50px;
+        -o-border-radius:50px;
+        -ms-border-radius:50px;
+        -webkit-border-radius:50px;
+        border-radius:50px;
+        padding:5px 10px;
+        color:#000;
+}
+
+.btn-white:hover {
+        background-color:#000;
+        color:#fff;
+}
+
+.btn-black {
+        background-color:#000;
+        -moz-border-radius:50px;
+        -o-border-radius:50px;
+        -ms-border-radius:50px;
+        -webkit-border-radius:50px;
+        border-radius:50px;
+        padding:6px 11px;
+        color:white;
+}
+
+.btn-black:hover {
+        background-color:#fff;
+        color:#000;
 }
 
 .flt-right {

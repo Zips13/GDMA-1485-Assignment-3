@@ -6,6 +6,8 @@
 <link rel="stylesheet" type="text/css" href="css/normalize.css">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/6b61f14c23.js" crossorigin="anonymous"></script>
+<link href="css/hover.css" rel="stylesheet" media="all">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
 <link rel="stylesheet" type="text/css" href="css/main.css">
 
 
@@ -17,20 +19,20 @@
     <header>
         <div class="row">
             <div class="col-nav flt-left">
-                <h1><i class="fas fa-heading fa-xs"></i></h1>
+                <h1><i class="fas fa-heading fa-xs"></i></h1> <!-- Validation is telling me that my h1 is empty but it's not -->
             </div>
             <nav class="col-nav flt-left">
                 <ul> <!-- ALL CAPS -->
-                    <li>amet</li>
-                    <li>eiusmod</li>
-                    <li>amet</li>
-                    <li>amet</li>
-                    <li>amet</li>
-                    <li>eiusmod</li>
+                    <li><a href="#eiusmod1" target="blank_" class="hvr-grow">amet</a></li>
+                    <li><a href="#bg-laptop" class="hvr-grow">eiusmod</a></li>
+                    <li><a href="#bg-stats" class="hvr-grow">amet</a></li>
+                    <li><a href="#shop" class="hvr-grow">amet</a></li>
+                    <li><a href="#light-grey" class="hvr-grow">amet</a></li>
+                    <li><a href="#eiusmod2" class="hvr-grow">eiusmod</a></li>
                 </ul>
             </nav>
             <div class="col-nav flt-right">
-                <p>lines</p>
+                <a href="javascript:void(0);"><i class="fas fa-bars hvr-grow"></i></a>
             </div>
         </div>
     </header>
@@ -54,7 +56,7 @@
         </div>
     </section>
 
-    <section class="bg-grey">
+    <section class="bg-grey" id="eiusmod1">
         <div class="wrapper">
             <div class="row">
                 <div class="col-helifeatures flt-left">
@@ -62,7 +64,7 @@
                         <h3><span>heli</span>features</h3>
                     </header>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Convallis a cras semper auctor. Diam maecenas ultricies mi eget mauris pharetra et ultrices neque. Urna id volutpat lacus laoreet non curabitur gravida arcu.</p>
-                     <a href="#">sit amet</a>
+                    <a href="javascript:void(0);" class="btn-grey hvr-pulse-grow">Lorem Ipsum</a>
                 </div>
                 <div class="col-helifeatures flt-left">
                     <i class="fas fa-mobile-alt"></i>
@@ -79,6 +81,8 @@
             </div>
         </div>
     </section>
+    
+   
 
     <section id="bg-laptop">
         <div class="wrapper">
@@ -91,22 +95,24 @@
                         <div class="col-who-we-are flt-left">
                             <i class="fas fa-anchor"></i>
                         </div>
-                        <div class="col-who-we-are flt-right">
+                        <div class="col-who-we-are flt-left">
                             <header>
                                 <h4>who we are</h4> <!-- ALL CAPS -->
                             </header>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Convallis a cras semper auctor.</p>
+                            <a href="javascript:void(0);">read more</a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-what-we-do flt-left">
                             <i class="fas fa-book"></i>
                         </div>
-                        <div class="col-what-we-do flt-right">
+                        <div class="col-what-we-do flt-left">
                             <header>
                                 <h4>what we do</h4> <!-- ALL CAPS -->
                             </header>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Convallis a cras semper auctor.</p>
+                            <a href="javascript:void(0);">read more</a>
                         </div>
                     </div>
                 </div>
@@ -115,6 +121,9 @@
     </section>
 
     <section id="bg-stats">
+        <header>
+            <h3>Stats</h3>
+        </header>
         <div class="wrapper">
             <div class="row">
                 <div class="col-stats flt-left">
@@ -145,16 +154,21 @@
 
         <div id="bg-latest-works">
             <div class="wrapper">
-                <header>
-                    <h3><span>latest</span>works</h3> <!-- ALL CAPS -->
-                </header>
-                <div>
-                    <p>Lorem Ipsum</p>
+                <div class="row">
+                    <div class="col-latest-works flt-right">
+                        <header>
+                            <h3><span>latest</span>works</h3> <!-- ALL CAPS -->
+                        </header>
+                        <div>
+                            <p>the black<br>bottles</p>
+                            <p>Lorem Ipsum</p>
+                        </div>
+                        <ul>
+                            <li><a href="javascript:void(0);" class="hvr-pulse-grow">&LeftAngleBracket;</a></li>  <!-- INLINE -->
+                            <li><a href="javascript:void(0);" class="hvr-pulse-grow">&RightAngleBracket;</a></li> <!-- INLINE -->
+                        </ul>
+                    </div>
                 </div>
-                <ul>
-                    <li><a href="#">&LeftAngleBracket;</a></li>  <!-- INLINE -->
-                    <li><a href="#">&RightAngleBracket;</a></li> <!-- INLINE -->
-                </ul>
             </div>
         </div>
     
@@ -162,14 +176,24 @@
             <div class="wrapper">
                 <div class="row">
                     <div class="col-updates flt-left">
-                        <h3><span>new</span>updates</p></h3> <!-- ALL CAPS -->
+                        <div class="row">
+                            <header>
+                                <div class="col-updates-head flt-left">
+                                    <i class="fas fa-heading fa-xs"></i>
+                                </div>
+                                <div class="col-updates-head flt-right">
+                                    <h3><span>new</span>updates</h3> <!-- ALL CAPS -->
+                                </div>
+                            </header>
+                            
+                        </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Convallis a cras semper auctor.</p>
-                        <a class="btn-white" href="#">Lorem Ipsum</a>
+                        <a class="btn-white hvr-pulse-grow" href="javascript:void(0);">Lorem Ipsum</a>
                     </div>
                     <div class="col-updates flt-left">
                         <img src="img/updates-laptop.jpg" alt="">
                     </div>
-                    <div class="col-updates flt-right">
+                    <div class="col-updates flt-left">
                         <img src="img/updates-people.jpg" alt="">
                     </div>
                 </div>
@@ -181,12 +205,12 @@
                 <div class="row">
                     <div class="flt-right">
                         <header>
-                            <h3><span>begin</span>with us</h3> <!-- ALLC CAPS -->
+                            <h3><span>begin</span>with us!</h3> <!-- ALLC CAPS -->
                         </header>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Convallis a cras semper auctor.</p>
                         <ul>
-                            <li><a href="#" class="btn-white">Lorem Ipsum</a></li>
-                            <li><a href="#" class="btn-black">Lorem Ipsum</a></li>
+                            <li><a href="javascript:void(0);" class="btn-white hvr-pulse-grow">Lorem Ipsum</a></li>
+                            <li><a href="javascript:void(0);" class="btn-black hvr-pulse-grow">Lorem Ipsum</a></li>
                         </ul>
                     </div>
                 </div>
@@ -194,18 +218,21 @@
         </div>
     </section>
 
-    <section id="bg-light-grey">
-        <div class="wrapper">
-            <form>
-                <legend><span>newsletter</span>sign up</legend> <!-- ALL CAPS -->
-                <fieldset>
-
-                </fieldset>
-            </form>
+    <form id="bg-light-grey">
+        <div class="wrapper">   
+            <fieldset>
+                <legend class="wrapper">news letter</legend>
+                <label for="email"><span>newsletter</span>sign&bullet;up</label>
+                <input type="text" placeholder="Enter Your E-mail" name="e-mail" id="email">
+                <button formaction="javascript:void(0);" class="hvr-bounce-in" type="submit">submit</button>
+            </fieldset>
         </div>
-    </section>
+    </form>
 
     <section id="logos">
+        <header>
+            <h3>Logos</h3>
+        </header>
         <div class="wrapper">
             <img src="img/logo.png" alt="logo">
             <img src="img/logo.png" alt="logo">
@@ -216,25 +243,92 @@
         </div>
     </section>
 
-    <footer class="bg-grey">
+    <footer class="bg-grey" id="eiusmod2">
         <div class="wrapper">
             <div class="row">
                 <div class="col-contact flt-left">
-                    <p>first column</p>
+                    <i class="fas fa-heading fa-xs"></i>
+                    <ul>
+                        <li><a href="tel:+1405551234">402-555-1234</a></li>
+                        <li><a href="mailto:example@gmail.com">example@gmail.com</a></li>
+                        <li><a href="javascript:void(0);">Lorem Ipsum</a></li>
+                        <li class="row">
+                            <div class="col-sprites flt-left">
+                                <a href="https://www.facebook.com/" target="blank_"><i class="fab fa-facebook-f"></i></a>
+                            </div>
+                            <div class="col-sprites flt-left">
+                                <a href="https://www.twitter.com/" target="blank_"><i class="fab fa-twitter"></i></a>
+                            </div>
+                            <div class="col-sprites flt-left">
+                                <a href="javascript:void(0);"><i class="fas fa-circle"></i></a>
+                            </div>
+                            <div class="col-sprites flt-left">
+                                <a href="https://www.instagram.com/" target="blank_"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-contact flt-left">
-                    <p>second column</p>
+                    <ul>
+                        <li>company</li>
+                        <li><a href="javascript:void(0);">About Us</a></li>
+                        <li><a href="javascript:void(0);">Contact Us</a></li>
+                        <li><a href="javascript:void(0);">FAQ</a></li>
+                        <li><a href="javascript:void(0);">Lorem</a></li>
+                        <li><a href="javascript:void(0);">Blog</a></li>
+                        <li><a href="javascript:void(0);">Privacy Policy</a></li>
+                    </ul>
+
                 </div>
                 <div class="col-contact flt-right">
-                    <p>third column</p>
+                    <ul>
+                        <li>news</li>
+                        <li><a href="javascript:void(0);">Lorem Ipsum</a></li>
+                        <li><a href="javascript:void(0);">Lorem Ipsum</a></li>
+                        <li><a href="javascript:void(0);">Lorem Ipsum</a></li>
+                        <li><a href="javascript:void(0);">Lorem Ipsum</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </footer>
 
     <section>
-        <p>@ copyright lorem ipsum copyright lorem ipusm</p>
+        <header>
+            <h3>Copyright Information</h3>
+        </header>
+        <p>@copyright lorem ipsum copyright lorem ipusm</p>
     </section>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+    // Add smooth scrolling to all links
+    $("a").on('click', function(event) {
+    
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+    
+        // Store hash
+        var hash = this.hash;
+    
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top
+        }, 800, function(){
+    
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+        });
+        } // End if
+    });
+    });
+    </script>
+    
 </body>
+
 </html>
+
